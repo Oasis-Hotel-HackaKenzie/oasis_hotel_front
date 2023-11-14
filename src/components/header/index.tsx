@@ -7,7 +7,6 @@ export const Header = () => {
     return(
         <StyledHeader>
         <img src={logo} alt="oasis-hotel" />
-
         <nav>
             <ul>
                 <li><a href="#">Quartos</a></li>
@@ -17,7 +16,6 @@ export const Header = () => {
           
         </nav>
         <div className="exemplo">Olá, Antõnio <img src={arrowDown} alt="arrowDown" />
-            
             </div>
         </StyledHeader>
     )
