@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     :root{
         --color-primary: #FFDCB4;
         --color-secondary: #019992;
-
+        --color-grey-05:#F8F9FA;
         --color-grey-04: #212529;
         --color-grey-03: #868E96;
         --color-grey-02: #E9ECEF;
@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--color-grey-04);
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
+        
     }
 
     body, input, button, textarea {
@@ -64,4 +65,13 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 0.75rem;
         font-weight: 400;
     }
-`
+    main{
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+`;
