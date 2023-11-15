@@ -1,10 +1,10 @@
-import { Header } from "./components/header"
+import { RegisterPage } from "./pages/register"
 
 function App() {
 
   return (
     <>
-      <Header/>
+      <RegisterPage/>
     </>
   )
 }

@@ -1,0 +1,142 @@
+import { Header } from "../../components/header";
+import image from "../../assets/landscapes/img-register.svg";
+import { Input } from "../../components/form/inputs";
+import { StyledForm } from "./style";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useContext } from "react";
+import { UserContext } from "../../providers";
+
+
+export const registerUserSchema = z.object({
+  name: z.string().min(1, "Este campo é obrigatório"),
+  cpf: z
+    .number()
+    .min(11, "Deve estar no formato +**(**)*****-****."),
+  email: z
+    .string()
+    .email("Digite aqui seu email")
+    .min(1, "Este campo é obrigatório"),
+  contact: z.number().min(10, "Este campo é obrigatório"),
+  nacionality: z.string().min(1, "Este campo é obrigatório"),
+  contactEmergency: z.number().min(10, "Este campo é obrigatório"),
+
+  
+  password: z.string().min(8, "Este campo é obrigatório"),
+});
+type TRegisterUser = z.infer<typeof registerUserSchema>;
+
+export const RegisterPage = () => {
+    const {
+        register,
+        handleSubmit,
+        // reset,
+        formState: { errors },
+      } = useForm<TRegisterUser>({
+        resolver: zodResolver(registerUserSchema),
+      });
+      
+      // const { registerUser } = useContext(UserContext);
+    //   const options = [
+    //     { value: false, label: "Comprador" },
+    //     { value: true, label: "Anunciante" },
+    //   ];
+    //   const [is_seller, setIs_seller] = useState<boolean>(false);
+    
+    //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     if (event.target.value == "false") {
+    //       setIs_seller(false);
+    //     } else {
+    //       setIs_seller(true);
+    //     }
+    //   };
+    
+      const handleRegisterForm = (payload: any) => {
+        const newData: any = {
+          contact: payload.contact,
+          cpf: payload.cpf,
+          email: payload.email,
+          name: payload.name,
+          password: payload.password,
+          nacionality: payload.nacionality,
+          contactEmergency: payload.contactEmergency,
+         
+        };
+        registerUser(newData);
+      };
+    
+
+  return (
+    <>
+      <Header />
+      <main>
+        <section className="formRegister">
+          <StyledForm   onSubmit={handleSubmit(handleRegisterForm)}>
+            
+            <Input
+              label="Nome"
+              type="text"
+              placeholder="Este campo é obrigatório"
+              register={register("name")}
+              error={errors.name?.message}
+            />
+
+            <Input
+              label="Cpf"
+              type="string"
+              placeholder="Digite aqui seu cpf"
+              register={register("cpf")}
+              error={errors.cpf?.message}
+            />
+           
+             <Input
+              label="Email"
+              type="string"
+              placeholder="Digite aqui seu email"
+              register={register("email")}
+              error={errors.email?.message}
+            />
+               <Input
+              label="Telefone"
+              type="string"
+              placeholder="Digite aqui seu telefone"
+              register={register("contact")}
+              error={errors.contact?.message}
+            />
+               <Input
+              label="Nacionalidade"
+              type="string"
+              placeholder="Digite aqui sua nacionalidade"
+              register={register("nacionality")}
+              error={errors.nacionality?.message}
+            />
+               <Input
+              label="Contato de emergência"
+              type="string"
+              placeholder="Digite aqui um contato para emergência"
+              register={register("contactEmergency")}
+              error={errors.contactEmergency?.message}
+            />
+               <Input
+              label="Senha"
+              type="string"
+              placeholder="Digite aqui sua senha"
+              register={register("password")}
+              error={errors.password?.message}
+            />
+            <div className="buttonsForm">
+              <button className="btnContinue">Continuar</button>
+              <button className="btnBack">Voltar</button>
+
+            </div>
+          </StyledForm>
+        </section>
+
+        <section className="imageRegister">
+          <img src={image} alt="image-page-register" />
+        </section>
+      </main>
+    </>
+  );
+};

@@ -15,7 +15,7 @@ export const Header = () => {
             </ul>
           
         </nav>
-        <div className="exemplo">Olá, Antõnio <img src={arrowDown} alt="arrowDown" />
+        <div className="exemplo">Olá, minha conta<img src={arrowDown} alt="arrowDown" />
             </div>
         </StyledHeader>
     )
