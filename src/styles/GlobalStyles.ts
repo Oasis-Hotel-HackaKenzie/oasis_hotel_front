@@ -34,6 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    ul {
+        list-style: none;
+    }
     
     // section titles
     h1 {
