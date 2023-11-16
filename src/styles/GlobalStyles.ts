@@ -65,13 +65,4 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 0.75rem;
         font-weight: 400;
     }
-    main{
-        margin: auto;
-        width: max-content;
-        height: max-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
 `;
