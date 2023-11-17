@@ -35,6 +35,10 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    ul {
+        list-style: none;
+    }
     
     // section titles
     h1 {
@@ -61,5 +65,5 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 0.75rem;
         font-weight: 400;
     }
-  
+
 `;
