@@ -1,12 +1,12 @@
 import { Header } from "../../components/header";
 import image from "../../assets/landscapes/img-register.svg";
 import { Input } from "../../components/form/inputs";
-import { StyledForm } from "./style";
+import { StyledForm, StyledMain, StyledSectionImage } from "./style";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useContext } from "react";
-import { UserContext } from "../../providers";
+// import { useContext } from "react";
+// import { UserContext } from "../../providers";
 
 
 export const registerUserSchema = z.object({
@@ -36,21 +36,7 @@ export const RegisterPage = () => {
       } = useForm<TRegisterUser>({
         resolver: zodResolver(registerUserSchema),
       });
-      
-      // const { registerUser } = useContext(UserContext);
-    //   const options = [
-    //     { value: false, label: "Comprador" },
-    //     { value: true, label: "Anunciante" },
-    //   ];
-    //   const [is_seller, setIs_seller] = useState<boolean>(false);
-    
-    //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     if (event.target.value == "false") {
-    //       setIs_seller(false);
-    //     } else {
-    //       setIs_seller(true);
-    //     }
-    //   };
+ 
     
       const handleRegisterForm = (payload: any) => {
         const newData: any = {
@@ -70,7 +56,7 @@ export const RegisterPage = () => {
   return (
     <>
       <Header />
-      <main>
+      <StyledMain>
         <section className="formRegister">
           <StyledForm   onSubmit={handleSubmit(handleRegisterForm)}>
             
@@ -133,10 +119,10 @@ export const RegisterPage = () => {
           </StyledForm>
         </section>
 
-        <section className="imageRegister">
+        <StyledSectionImage>
           <img src={image} alt="image-page-register" />
-        </section>
-      </main>
+        </StyledSectionImage>
+      </StyledMain>
     </>
   );
 };

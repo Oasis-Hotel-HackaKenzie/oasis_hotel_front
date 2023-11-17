@@ -1,12 +1,11 @@
-import { RegisterPage } from "./pages/register"
+import { RoutesMain } from "./routes/routes";
 
 function App() {
-
   return (
     <>
-      <RegisterPage/>
+      <RoutesMain />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledSectionRegister = styled.section``;
 export const StyledSectionImage = styled.section`
-  img {
-    width: 467px;
-    height: 700px;
-  }
+ background-image: "../../assets/landscapes/img-register.svg";
 `;
-
+export const StyledMain = styled.main`
+display: flex;
+padding: 102px;
+`
 export const StyledForm = styled.form`
   width: max-content;
   height: max-content;
@@ -17,6 +17,7 @@ export const StyledForm = styled.form`
   flex-direction: column;
   padding: 40px;
   margin-bottom: 20px;
+  margin-right: 60px;
   /* filter: drop-shadow(2px 2px 10px gray); */
   gap: 6px;
 

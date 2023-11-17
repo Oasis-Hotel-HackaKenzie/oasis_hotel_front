@@ -9,6 +9,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   justify-self: center;
+  padding: 0 110px 0 110px;
 
   img {
     width: 80px;
