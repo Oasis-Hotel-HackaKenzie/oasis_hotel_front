@@ -11,6 +11,7 @@ import air from "../../assets/icons/air-conditioner.png"
 import breakfast from "../../assets/icons/breakfast.png"
 import coffeeMachine from "../../assets/icons/coffee-machine.png"
 import foodService from "../../assets/icons/food-service.png"
+import { ReservationRoom } from "../../components/reservationRoom"
 
 export const RoomDetailPage = () => {
 
@@ -40,9 +41,9 @@ export const RoomDetailPage = () => {
                 <figure>
                     <img src={pic3} alt="" />
                 </figure>
-                <figure>
+                {/* <figure>
                     <img src={pic4} alt="" />
-                </figure>
+                </figure> */}
                 <figure>
                     <img src={pic5} alt="" />
                 </figure>
@@ -91,12 +92,13 @@ export const RoomDetailPage = () => {
                     <h2>Reservar este quarto</h2>
                 </div>
                 <div className="loginText">
-                    <p>
+                    {/* <p>
                         Para reservar seu quarto é necessário realizar o login.
                     </p>
                     <p>
                         Clique <span>aqui</span> para entrar em sua conta
-                    </p>
+                    </p> */}
+                   <ReservationRoom/>
                 </div>
             </section>
         </ StyledRoomDetails>

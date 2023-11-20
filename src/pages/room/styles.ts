@@ -48,7 +48,7 @@ export const StyledRoomDetails = styled.main`
 
         img {
             height: 100%;
-            width: auto;
+            width: 389px;
         }
     }
 
@@ -101,7 +101,7 @@ export const StyledRoomDetails = styled.main`
     .loginText {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         justify-content: center;
 
         span {

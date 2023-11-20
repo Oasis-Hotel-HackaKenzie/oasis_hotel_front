@@ -1,4 +1,3 @@
-import { Header } from "../../components/header";
 import image from "../../assets/landscapes/img-login.svg";
 import {
   StyledForm,
@@ -33,7 +32,6 @@ export const LoginPage = () => {
   } = useForm<tLogin>({ resolver: zodResolver(loginSchema) });
   return (
     <>
-      <Header />
       <StyledMain>
         <StyledImage>
           <img src={image} alt="image-page-login" />
