@@ -1,4 +1,3 @@
-import { Header } from "../../components/header";
 import image from "../../assets/landscapes/img-homepage.svg";
 import demoImage from "../../assets/landscapes/piscina.svg";
 import demoImageGastronomic from "../../assets/landscapes/restaurant.svg";
@@ -13,7 +12,6 @@ import {
 export const HomePage = () => {
   return (
     <>
-      <Header />
       <StyledMain>
         <StyledSectionImage>
           <img src={image} alt="image-page-home" />

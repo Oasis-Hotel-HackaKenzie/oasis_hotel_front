@@ -1,4 +1,3 @@
-import { Header } from "../../components/header";
 import image from "../../assets/landscapes/img-register.svg";
 import { Input } from "../../components/form/inputs";
 import { StyledForm, StyledMain, StyledSectionImage } from "./style";
@@ -55,7 +54,6 @@ export const RegisterPage = () => {
 
   return (
     <>
-      <Header />
       <StyledMain>
         <section className="formRegister">
           <StyledForm   onSubmit={handleSubmit(handleRegisterForm)}>
