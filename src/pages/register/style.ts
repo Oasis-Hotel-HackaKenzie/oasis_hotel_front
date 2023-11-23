@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const StyledSectionRegister = styled.section``;
 export const StyledSectionImage = styled.section`
- background-image: "../../assets/landscapes/img-register.svg";
+  background-image: "../../assets/landscapes/img-register.svg";
 `;
 export const StyledMain = styled.main`
-display: flex;
-padding: 102px;
-`
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+`;
 export const StyledForm = styled.form`
   width: max-content;
   height: max-content;
   border-radius: 4px;
-  background-color: ;
   display: flex;
   flex-direction: column;
   padding: 40px;
