@@ -5,6 +5,8 @@ import { HomePage } from "../pages/home";
 import { RoomDetailPage } from "../pages/room";
 import { RoomPage } from "../pages/roomPage";
 import { PageAttendant } from "../pages/attendant";
+import { PageManager } from "../pages/manager";
+import { PageGuest } from "../pages/guest";
 
 
 export const RoutesMain = () => {
@@ -16,6 +18,10 @@ export const RoutesMain = () => {
         <Route path="/roompagedetail" element={<RoomDetailPage />} />
         <Route path="/roompage" element={<RoomPage />} />
         <Route path="/attendantpage" element={<PageAttendant />} />
+        <Route path="/managerpage" element={<PageManager />} />
+        <Route path="/guestpage" element={<PageGuest />} />
+
+
 
         
 

@@ -36,8 +36,7 @@ export const StyledMain = styled.main`
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
-  gap:32px;
+
 `;
 
 export const StyledSection = styled.section`
