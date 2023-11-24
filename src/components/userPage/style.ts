@@ -1,7 +1,8 @@
+
 import styled from "styled-components";
 
 export const StyledSectionService = styled.section`
-  margin-bottom: 250px;
+margin-bottom: 250px;
   div {
     border-radius: 10px;
     background: rgba(255, 220, 180, 0.8);
@@ -22,11 +23,12 @@ export const StyledSectionService = styled.section`
         justify-content: center;
         gap: 100px;
         align-items: center;
-        width: max-content;
-        &:hover {
-          color: var(--color-secondary);
-        }
+        &:hover{
+        color: var( --color-secondary);
       }
+      }
+
+     
     }
   }
 `;
@@ -37,7 +39,7 @@ export const StyledMain = styled.main`
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-  gap:32px;
+  gap: 152px;
 `;
 
 export const StyledSection = styled.section`
@@ -50,20 +52,5 @@ export const StyledSection = styled.section`
     width: 710px;
     height: 574px;
     flex-shrink: 0;
-    padding: 20px;
-
-    ul {
-      border: 5px solid #ffd4a2;
-      border-radius: 12px;
-      width: 200px;
-      height: 200px;
-      padding: 20px;
-      li {
-        &:hover {
-          background-color:  #FFDCB4;
-          color: var(--color-secondary);
-        }
-      }
-    }
   }
 `;
