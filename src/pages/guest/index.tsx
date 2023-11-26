@@ -1,14 +1,14 @@
 import { StyledMain}from "./style";
 import { Menu } from "../../components/menu";
-import { MyProfile } from "../../components/myProfile";
-import { MyReservation } from "../../components/myReservations";
-import { UpdateClient } from "../../components/updateProfile";
+
+import { CheckOutAttendant } from "../../components/checkoutAttendant";
+import { DeletePromotion } from "../../components/DeletePromotion";
 
 export const PageGuest = () => {
   return (
     <StyledMain>
      <Menu/>
-     <UpdateClient/>
+     <DeletePromotion/>
      {/* <MyReservation/> */}
     </StyledMain>
   );
