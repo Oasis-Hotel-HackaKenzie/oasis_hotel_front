@@ -77,7 +77,6 @@ export const StyledSection = styled.section`
         flex: 1 0 50%;
         display: flex;
         gap: 130px;
-        background-color: red;
         &:hover {
           background-color: #ffd4a2;
         }
