@@ -1,12 +1,15 @@
 import { StyledMain}from "./style";
-import { MenuServices } from "../../components/menu-services";
 import { Menu } from "../../components/menu";
+import { MyProfile } from "../../components/myProfile";
+import { MyReservation } from "../../components/myReservations";
+import { UpdateClient } from "../../components/updateProfile";
 
 export const PageGuest = () => {
   return (
     <StyledMain>
      <Menu/>
-      <MenuServices/>
+     <UpdateClient/>
+     {/* <MyReservation/> */}
     </StyledMain>
   );
 };
