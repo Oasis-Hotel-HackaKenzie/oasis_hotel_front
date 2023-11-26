@@ -2,7 +2,7 @@ import { StyledRoomDetails } from "./styles"
 import pic1 from "../../assets/mock_room/de3ef2251151210c339b849bf2e45cc2.jpg"
 import pic2 from "../../assets/mock_room/dfb07c6913f6d7abfa79457fab766530.jpg"
 import pic3 from "../../assets/mock_room/qt3.jpg"
-import pic4 from "../../assets/mock_room/qt4.jpg"
+// import pic4 from "../../assets/mock_room/qt4.jpg"
 import pic5 from "../../assets/mock_room/qt5.jpg"
 import pic6 from "../../assets/mock_room/qt55.jpg"
 import pic7 from "../../assets/mock_room/qt555.jpg"
@@ -11,7 +11,7 @@ import air from "../../assets/icons/air-conditioner.png"
 import breakfast from "../../assets/icons/breakfast.png"
 import coffeeMachine from "../../assets/icons/coffee-machine.png"
 import foodService from "../../assets/icons/food-service.png"
-import { ReservationRoom } from "../../components/reservationRoom"
+// import { ReservationRoom } from "../../components/reservationRoom"
 
 export const RoomDetailPage = () => {
 
