@@ -31,8 +31,20 @@ export const StyledHeader = styled.header`
         text-decoration: none;
       }
     }
+    span{
+      display: flex;
+      text-decoration: none;
+      
+
+    }
   }
-  .exemplo {
+  .btnButtons{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+
+  }
+  /* .exemplo {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -40,5 +52,5 @@ export const StyledHeader = styled.header`
       width: 20px;
       height: 20px;
     }
-  }
+  } */
 `;

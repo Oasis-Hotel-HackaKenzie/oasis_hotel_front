@@ -2,7 +2,7 @@ import { z } from "zod";
 import { StyledForm, StyledModal } from "./style";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "../form/inputs";
+import { Input } from "../../form/inputs";
 
 
 export const registerUserSchema = z.object({

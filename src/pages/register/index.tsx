@@ -4,60 +4,58 @@ import { StyledForm, StyledMain, StyledSectionImage } from "./style";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useContext } from "react";
+import { UserContext } from "../../providers/userContext";
+import { Link } from "react-router-dom";
 // import { useContext } from "react";
 // import { UserContext } from "../../providers";
 
-
 export const registerUserSchema = z.object({
   name: z.string().min(1, "Este campo é obrigatório"),
-  cpf: z
-    .number()
-    .min(11, "Deve estar no formato +**(**)*****-****."),
+  cpf: z.string().min(11, "Deve estar no formato +**(**)*****-****."),
   email: z
     .string()
     .email("Digite aqui seu email")
     .min(1, "Este campo é obrigatório"),
-  contact: z.number().min(10, "Este campo é obrigatório"),
+  contact: z.string().min(10, "Este campo é obrigatório"),
   nacionality: z.string().min(1, "Este campo é obrigatório"),
-  contactEmergency: z.number().min(10, "Este campo é obrigatório"),
+  contactEmergency: z.string().min(10, "Este campo é obrigatório"),
 
-  
   password: z.string().min(8, "Este campo é obrigatório"),
 });
 type TRegisterUser = z.infer<typeof registerUserSchema>;
 
 export const RegisterPage = () => {
-    const {
-        register,
-        handleSubmit,
-        // reset,
-        formState: { errors },
-      } = useForm<TRegisterUser>({
-        resolver: zodResolver(registerUserSchema),
-      });
- 
-    
-      const handleRegisterForm = (payload: any) => {
-        const newData: any = {
-          contact: payload.contact,
-          cpf: payload.cpf,
-          email: payload.email,
-          name: payload.name,
-          password: payload.password,
-          nacionality: payload.nacionality,
-          contactEmergency: payload.contactEmergency,
-         
-        };
-        registerUser(newData);
-      };
-    
+  const { registerUser } = useContext(UserContext);
+
+  const {
+    register,
+    handleSubmit,
+    // reset,
+    formState: { errors },
+  } = useForm<TRegisterUser>({
+    mode: "onBlur",
+    resolver: zodResolver(registerUserSchema),
+  });
+
+  // const handleRegisterForm = (payload: any) => {
+  //   const newData: any = {
+  //     contact: payload.contact,
+  //     cpf: payload.cpf,
+  //     email: payload.email,
+  //     name: payload.name,
+  //     password: payload.password,
+  //     nacionality: payload.nacionality,
+  //     contactEmergency: payload.contactEmergency,
+  //   };
+  //   registerUser(newData);
+  // };
 
   return (
     <>
       <StyledMain>
         <section className="formRegister">
-          <StyledForm   onSubmit={handleSubmit(handleRegisterForm)}>
-            
+          <StyledForm onSubmit={()=>console.log("oi")}>
             <Input
               label="Nome"
               type="text"
@@ -73,46 +71,50 @@ export const RegisterPage = () => {
               register={register("cpf")}
               error={errors.cpf?.message}
             />
-           
-             <Input
+
+            <Input
               label="Email"
               type="string"
               placeholder="Digite aqui seu email"
               register={register("email")}
               error={errors.email?.message}
             />
-               <Input
+            <Input
               label="Telefone"
               type="string"
               placeholder="Digite aqui seu telefone"
               register={register("contact")}
               error={errors.contact?.message}
             />
-               <Input
+            <Input
               label="Nacionalidade"
               type="string"
               placeholder="Digite aqui sua nacionalidade"
               register={register("nacionality")}
               error={errors.nacionality?.message}
             />
-               <Input
+            <Input
               label="Contato de emergência"
               type="string"
               placeholder="Digite aqui um contato para emergência"
               register={register("contactEmergency")}
               error={errors.contactEmergency?.message}
             />
-               <Input
+            <Input
               label="Senha"
-              type="string"
-              placeholder="Digite aqui sua senha"
+              type="password"
+              placeholder="Digitar senha"
               register={register("password")}
               error={errors.password?.message}
             />
             <div className="buttonsForm">
-              <button className="btnContinue">Continuar</button>
-              <button className="btnBack">Voltar</button>
+              <button type="submit" className="btnContinue">
+                Continuar
+              </button>
 
+              <Link to={"/"}>
+                <button className="btnBack">Voltar</button>
+              </Link>
             </div>
           </StyledForm>
         </section>
