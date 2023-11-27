@@ -9,7 +9,10 @@ export const StyledImage = styled.section`
 `;
 export const StyledMain = styled.main`
   display: flex;
-  padding: 102px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
 `;
 export const StyledForm = styled.form`
   width: max-content;

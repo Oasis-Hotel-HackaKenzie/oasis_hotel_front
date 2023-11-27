@@ -3,7 +3,7 @@ import arrow from "../../assets/icons/right-arrow 1.svg";
 import { useEffect, useState } from "react";
 
 export const Menu = () => {
-  const [role, setRole] = useState("attendant");
+  const [role, setRole] = useState("guest");
   
 
   // Obtém a role do usuário logado
